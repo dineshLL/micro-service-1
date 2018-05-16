@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-	axios.get('http://localhost:3001')
+	axios.get('http://tut-service-two:8080/')
 		.then(response => {
 			res.send(response.data);
 		})
@@ -19,4 +19,4 @@ app.get('/', (req, res) => {
 		})
 })
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(8080, () => console.log('Example app listening on port 3000!'))
